@@ -27,6 +27,7 @@ header {
 }
 
 nav {
+    width: fit-content;
 }
 
 nav ul {
