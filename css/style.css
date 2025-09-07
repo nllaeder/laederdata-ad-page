@@ -15,11 +15,18 @@ header {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+    padding: 20px;
     background-color: rgba(13, 13, 13, 0.8);
     z-index: 1000;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo img {
@@ -27,13 +34,12 @@ header {
 }
 
 nav {
-    flex-grow: 1;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
     gap: 30px;
