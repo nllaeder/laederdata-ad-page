@@ -33,7 +33,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-start; /* Changed from flex-end */
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
     gap: 30px;
