@@ -27,7 +27,7 @@ header {
 }
 
 nav {
-    width: fit-content;
+    flex-grow: 1;
 }
 
 nav ul {
