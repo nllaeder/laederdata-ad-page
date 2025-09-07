@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #0d0d0d;
     color: #f0f0f0;
@@ -26,14 +30,10 @@ nav {
     flex-grow: 1;
 }
 
-nav {
-    flex-grow: 1;
-}
-
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start; /* Changed from flex-end */
     margin: 0;
     padding: 0;
     gap: 30px;
@@ -70,6 +70,8 @@ nav ul li a {
 .hero-content {
     position: relative;
     z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
 }
 
 .hero h1 {
@@ -78,7 +80,7 @@ nav ul li a {
 }
 
 .hero .highlight {
-    color: #8fba40;
+    color: #4CAF50;
 }
 
 .hero p {
@@ -87,19 +89,20 @@ nav ul li a {
 }
 
 .cta-button {
-    background-color: #8fba40;
+    background-color: #4CAF50;
     color: #0d0d0d;
     padding: 15px 30px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: all 0.3s ease;
+    border: 1px solid transparent;
 }
 
 .cta-button:hover {
     background-color: transparent;
-    color: #8fba40;
-    border: 1px solid #8fba40;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
 }
 
 .scroll-indicator {
@@ -139,31 +142,24 @@ nav ul li a {
     font-size: 16px;
     color: #b0b0b0;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.quote blockquote {
+.problem-description {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.problem-description h2 {
     font-size: 36px;
     font-weight: bold;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
-.quote .highlight {
-    color: #8fba40;
-}
-
-.quote footer {
-    margin-top: 30px;
-}
-
-.quote cite {
-    font-style: normal;
-    font-weight: bold;
-}
-
-.quote footer p {
-    font-size: 16px;
+.problem-description p {
+    font-size: 18px;
     color: #b0b0b0;
-    margin: 5px 0 0;
+    line-height: 1.6;
 }
 
 .features {
@@ -176,16 +172,21 @@ nav ul li a {
     margin: 0;
 }
 
-.features p {
+.features > p {
     font-size: 18px;
     color: #b0b0b0;
     margin: 20px 0 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .feature-card {
@@ -198,7 +199,7 @@ nav ul li a {
 
 .feature-card:hover {
     transform: translateY(-10px);
-    border-color: #8fba40;
+    border-color: #4CAF50;
 }
 
 .feature-card img {
@@ -208,13 +209,89 @@ nav ul li a {
 
 .feature-card h3 {
     font-size: 24px;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 .feature-card p {
     font-size: 16px;
     color: #b0b0b0;
     margin: 10px 0 0;
+    line-height: 1.6;
+}
+
+.pricing {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.pricing > p {
+    font-size: 18px;
+    color: #b0b0b0;
+    margin: 20px 0 50px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+.pricing-card .price {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+.pricing-card .price .per-month {
+    font-size: 16px;
+    font-weight: normal;
+    color: #b0b0b0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.pricing-card ul li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.pricing-card ul li::before {
+    content: '✓';
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+}
+
+.pricing-card .cta-button {
+    margin-top: auto;
 }
 
 footer {
@@ -226,10 +303,16 @@ footer {
 @media (max-width: 768px) {
     header {
         padding: 20px;
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
     }
 
     nav ul {
-        display: none;
+        justify-content: center;
+        gap: 20px;
     }
 
     .hero h1 {
@@ -240,11 +323,15 @@ footer {
         font-size: 18px;
     }
 
-    .quote blockquote {
+    .problem-description h2 {
         font-size: 28px;
     }
 
     .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
         grid-template-columns: 1fr;
     }
 }
