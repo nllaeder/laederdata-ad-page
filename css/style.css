@@ -15,18 +15,11 @@ header {
     top: 0;
     width: 100%;
     display: flex;
-    padding: 20px;
+    align-items: center;
+    padding: 20px 50px;
     background-color: rgba(13, 13, 13, 0.8);
     z-index: 1000;
-}
-
-.header-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-sizing: border-box;
 }
 
 .logo img {
@@ -34,15 +27,15 @@ header {
 }
 
 nav {
+    margin-left: auto;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
     gap: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li a {
