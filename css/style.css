@@ -334,3 +334,19 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* Login Section Styles */
+#login-section {
+    padding: 60px 0;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+#login-section h2 {
+    margin-bottom: 20px;
+}
+
+#login-section p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #666;
+}

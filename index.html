@@ -3,102 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaederData</title>
+    <title>LaederData - Seamless Data Integration</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="images/logo-white.png" alt="Laeder-Data Logo">
+        <div class="container">
+            <div id="branding">
+                <img src="images/logo-white.png" alt="LaederData Logo" class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="client-login.html">Client Login</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="mailto:nicholas@laederconsulting.com">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Stop Drowning in Data. Start Discovering Insights.</h1>
-            <p>You have the data, but what is it telling you? I'll help you uncover the hidden stories in your data, turning complex numbers into clear actions for your business.</p>
-            <a href="#pricing" class="cta-button">See Plans & Pricing</a>
-        </div>
-        <div class="scroll-indicator"></div>
-    </section>
-    <section class="quote">
-        <p class="tagline">ARE YOU MAKING DECISIONS IN THE DARK?</p>
-        <div class="problem-description">
-            <h2>You've got data in a dozen different places. You know there are valuable insights in there, but you don't have the time or the tools to find them.</h2>
-            <p>You're flying blind, making critical decisions based on gut feelings instead of hard evidence.</p>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Unlock Your Business Potential with Seamless Data Integration</h1>
+            <p>Connect your marketing platforms, uncover insights, and drive growth with our automated data solutions.</p>
+            <a href="#contact" class="button">Get Started</a>
         </div>
     </section>
-    <section id="solutions" class="features">
-        <h2>Your Personal Data Analyst</h2>
-        <p>I connect to your existing tools, analyze your data, and deliver actionable insights directly to you. No dashboards to learn, no complicated software to manage. Just clear, concise reports and summaries that help you grow your business.</p>
-        <div class="features-grid">
-            <div class="feature-card">
-                <img src="images/icon-realtime.png" alt="Real-time Icon">
-                <h3>Monthly Email Report</h3>
-                <p>I'll start by analyzing one of your key data sources, identifying areas for improvement. Each month, you'll get a clear report tracking our progress.</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/icon-measurable.png" alt="Measurable Icon">
-                <h3>Monthly Podcast Summary</h3>
-                <p>Get a personalized podcast summarizing the key takeaways from your data. I'll walk you through what's working, what's not, and what you should do next.</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/icon-seamless.png" alt="Seamless Icon">
-                <h3>Full Data Analysis</h3>
-                <p>Ready for a deep dive? Let's talk about a comprehensive data analysis package tailored to your specific business goals.</p>
-            </div>
+
+    <section id="about">
+        <div class="container">
+            <h2>About LaederData</h2>
+            <p>LaederData specializes in creating robust data pipelines that connect disparate marketing tools like Mailchimp and Constant Contact directly to powerful analytics platforms. We eliminate manual data wrangling, providing you with clean, reliable, and ready-to-use data so you can focus on what truly matters: making informed decisions.</p>
         </div>
     </section>
-    <section id="pricing" class="pricing">
-        <h2>Simple, Transparent Pricing</h2>
-        <p>Choose the plan that's right for you. All prices are billed annually.</p>
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>Monthly Email Report</h3>
-                <p class="price">$49<span class="per-month">/mo</span></p>
-                <ul>
-                    <li>Analysis of 1 Data Source</li>
-                    <li>(e.g., Shopify)</li>
-                    <li>Monthly Email Report</li>
-                    <li>Initial area of improvement analysis</li>
-                </ul>
-                <a href="#" class="cta-button">Choose Starter</a>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-box">
+                <img src="images/icon-seamless.png" alt="Seamless Integration Icon">
+                <h3>Seamless Integration</h3>
+                <p>We connect your favorite marketing apps to a centralized data warehouse, creating a single source of truth for your business metrics.</p>
             </div>
-            <div class="pricing-card">
-                <h3>Monthly Podcast Summary</h3>
-                <p class="price">$150<span class="per-month">/mo</span></p>
-                <ul>
-                    <li>Analysis of up to 3 Data Sources</li>
-                    <li>Monthly Podcast Summary</li>
-                    <li>Suggested next steps and improvements</li>
-                    <li>Priority Support</li>
-                </ul>
-                <a href="#" class="cta-button">Choose Growth</a>
+            <div class="service-box">
+                <img src="images/icon-realtime.png" alt="Real-time Analytics Icon">
+                <h3>Real-time Analytics</h3>
+                <p>Access up-to-the-minute data in your preferred BI tool. No more waiting for manual reports. Your data is always on and always current.</p>
             </div>
-            <div class="pricing-card">
-                <h3>Full Data Analysis</h3>
-                <p class="price">Let's Talk</p>
-                <ul>
-                    <li>Comprehensive Data Analysis</li>
-                    <li>Custom Reports & Dashboards</li>
-                    <li>Dedicated Analyst</li>
-                    <li>Let's Talk</li>
-                </ul>
-                <a href="mailto:nicholas@laederconsulting.com" class="cta-button">Contact Us</a>
+            <div class="service-box">
+                <img src="images/icon-measurable.png" alt="Measurable Results Icon">
+                <h3>Measurable Results</h3>
+                <p>Track campaign performance, customer engagement, and ROI with unparalleled accuracy. Make data-driven decisions with confidence.</p>
             </div>
         </div>
     </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Ready to take control of your data? Reach out to us for a free consultation.</p>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 LaederData. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 LaederData. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
