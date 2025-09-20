@@ -8,75 +8,98 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div id="branding">
-                <img src="images/logo-white.png" alt="LaederData Logo" class="logo">
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="client-login.html">Client Login</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <img src="images/logo-white.png" alt="LaederData Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#problem">The Problem</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="client-login.html">Client Login</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <h1>Unlock Your Business Potential with Seamless Data Integration</h1>
-            <p>Connect your marketing platforms, uncover insights, and drive growth with our automated data solutions.</p>
-            <a href="#contact" class="button">Get Started</a>
+    <div class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Your Data, <span class="highlight">Unified.</span></h1>
+            <p>Automated data pipelines for modern marketing teams.</p>
+            <a href="#pricing" class="cta-button">Get Started</a>
         </div>
-    </section>
+        <div class="scroll-indicator"></div>
+    </div>
 
-    <section id="about">
-        <div class="container">
-            <h2>About LaederData</h2>
-            <p>LaederData specializes in creating robust data pipelines that connect disparate marketing tools like Mailchimp and Constant Contact directly to powerful analytics platforms. We eliminate manual data wrangling, providing you with clean, reliable, and ready-to-use data so you can focus on what truly matters: making informed decisions.</p>
+    <div class="quote" id="problem">
+        <p class="tagline">The LaederData Difference</p>
+        <div class="problem-description">
+            <h2>Stop hunting for data. Start making decisions.</h2>
+            <p>Disconnected marketing tools create data silos, forcing you to spend hours manually exporting and compiling reports. We automate the entire process, piping your data directly from services like Constant Contact into a central warehouse, ready for real-time analysis.</p>
         </div>
-    </section>
+    </div>
 
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-box">
-                <img src="images/icon-seamless.png" alt="Seamless Integration Icon">
-                <h3>Seamless Integration</h3>
-                <p>We connect your favorite marketing apps to a centralized data warehouse, creating a single source of truth for your business metrics.</p>
+    <div class="features" id="features">
+        <h2>Built for Actionable Insights</h2>
+        <p>Our platform is designed to give you a clear, consolidated view of your marketing performance.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="images/icon-seamless.png" alt="Seamless Integration">
+                <h3>Automated Connectors</h3>
+                <p>No more CSVs. We provide direct, reliable API connections to your most important marketing platforms.</p>
             </div>
-            <div class="service-box">
-                <img src="images/icon-realtime.png" alt="Real-time Analytics Icon">
-                <h3>Real-time Analytics</h3>
-                <p>Access up-to-the-minute data in your preferred BI tool. No more waiting for manual reports. Your data is always on and always current.</p>
+            <div class="feature-card">
+                <img src="images/icon-realtime.png" alt="Real-time Analytics">
+                <h3>Centralized Warehouse</h3>
+                <p>All your data, from every source, is cleaned, structured, and stored in one place for easy access.</p>
             </div>
-            <div class="service-box">
-                <img src="images/icon-measurable.png" alt="Measurable Results Icon">
-                <h3>Measurable Results</h3>
-                <p>Track campaign performance, customer engagement, and ROI with unparalleled accuracy. Make data-driven decisions with confidence.</p>
+            <div class="feature-card">
+                <img src="images/icon-measurable.png" alt="Measurable Results">
+                <h3>Analytics-Ready</h3>
+                <p>Connect your favorite BI tool (like Looker or Tableau) to unlock deep insights and visualize your success.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Ready to take control of your data? Reach out to us for a free consultation.</p>
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message"></textarea>
-                <button type="submit" class="button">Send Message</button>
-            </form>
+    <div class="pricing" id="pricing">
+        <h2>Simple, Transparent Pricing</h2>
+        <p>Choose the plan that's right for your business.</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <p class="price">$99<span class="per-month">/mo</span></p>
+                <ul>
+                    <li>1 Data Source</li>
+                    <li>Daily Syncs</li>
+                    <li>Email Support</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Plan</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Growth</h3>
+                <p class="price">$249<span class="per-month">/mo</span></p>
+                <ul>
+                    <li>Up to 5 Data Sources</li>
+                    <li>Hourly Syncs</li>
+                    <li>Priority Email Support</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Plan</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Scale</h3>
+                <p class="price">$499<span class="per-month">/mo</span></p>
+                <ul>
+                    <li>Unlimited Data Sources</li>
+                    <li>Real-time Syncs</li>
+                    <li>Dedicated Support</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Plan</a>
+            </div>
         </div>
-    </section>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 LaederData. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2025 LaederData. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
