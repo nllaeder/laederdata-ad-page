@@ -1,0 +1,68 @@
+[
+    {
+        "id": "pool-db",
+        "title": "Modernizing Local Recreation",
+        "subtitle": "Reference Project",
+        "description": "A local pool membership database was draining money. They were paying for expensive \"all-in-one\" software that was clunky and overkill.",
+        "metrics": [
+            {
+                "label": "20% Cost Reduction",
+                "desc": "Replaced $1000/yr software with a custom $200 solution."
+            },
+            {
+                "label": "Zero Friction Check-in",
+                "desc": "Built a custom QR code scanner that runs on any phone."
+            },
+            {
+                "label": "Data Ownership",
+                "desc": "They now own their member list, not the software company."
+            }
+        ],
+        "ctaText": "Ask about custom database solutions",
+        "visualType": "pool_placeholder"
+    },
+    {
+        "id": "naptown-sings",
+        "title": "AI Marketing Intelligence",
+        "subtitle": "Naptown Sings! (Annapolis, MD)",
+        "description": "We analyzed Mailchimp campaigns to find the perfect send time. Then we built an automated pipeline that converts weekly analytics into a 5-minute 'podcast' for the busy owner.",
+        "metrics": [
+            {
+                "label": "Audio Reporting",
+                "desc": "Business owner gets a weekly AI-generated audio summary of their data."
+            },
+            {
+                "label": "Optimized Engagement",
+                "desc": "Identified exact day/time and subject line patterns that drive opens."
+            },
+            {
+                "label": "Hands-Free Insights",
+                "desc": "No more staring at dashboards. Listen to your stats in the car."
+            }
+        ],
+        "ctaText": "Hear how we use Audio AI",
+        "visualType": "audio_waveform"
+    },
+    {
+        "id": "voice-by-chelsea",
+        "title": "Contact List Hygiene",
+        "subtitle": "Voice by Chelsea",
+        "description": "Analyzed a TextMagic list of 5,000+ subscribers to filter out landlines, VoIP, and spoofed numbers. We also implemented bot protection to stop fake leads.",
+        "metrics": [
+            {
+                "label": "10% Immediate Savings",
+                "desc": "Stopped paying for texts sent to landlines and fake numbers."
+            },
+            {
+                "label": "Bot Defense",
+                "desc": "Blocked crawler bots from polluting the lead intake form."
+            },
+            {
+                "label": "Verified Data",
+                "desc": "Ensured every number on the list is a real, textable mobile device."
+            }
+        ],
+        "ctaText": "Clean your contact list",
+        "visualType": "security_shield"
+    }
+]
