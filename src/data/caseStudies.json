@@ -6,8 +6,8 @@
         "description": "A local pool membership database was draining money. They were paying for expensive \"all-in-one\" software that was clunky and overkill.",
         "metrics": [
             {
-                "label": "20% Cost Reduction",
-                "desc": "Replaced $1000/yr software with a custom $200 solution."
+                "label": "60% Cost Reduction",
+                "desc": "Replaced $1000/yr software with a custom $400 solution."
             },
             {
                 "label": "Zero Friction Check-in",
