@@ -24,9 +24,9 @@ const Contact = () => {
                     <span className="text-orange-500 font-bold tracking-wider uppercase text-sm">Let's Fix It</span>
                     <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6 text-white">Get a Friction Audit</h2>
                     <p className="text-slate-400 text-lg">
-                        Tell us what you hate doing. We'll tell you how to automate it.
+                        Tell us where your process breaks down. We'll show you how to automate it.
                         <br />
-                        <span className="text-sm text-slate-500 mt-2 block">(No sales calls. Just a free roadmap.)</span>
+                        <span className="text-sm text-slate-500 mt-2 block">(No sales calls. Just a technical roadmap.)</span>
                     </p>
                 </div>
 
@@ -79,12 +79,12 @@ const Contact = () => {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-slate-400 mb-2">What is the #1 thing you hate doing manually?</label>
+                                <label className="block text-sm font-medium text-slate-400 mb-2">What is the #1 manual task slowing you down?</label>
                                 <textarea
                                     rows="4"
                                     required
                                     className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all"
-                                    placeholder="Adding invoices to Quickbooks, manually emailing leads..."
+                                    placeholder="Examples: Adding invoices to Quickbooks, manually emailing leads, updating inventory..."
                                 ></textarea>
                             </div>
 

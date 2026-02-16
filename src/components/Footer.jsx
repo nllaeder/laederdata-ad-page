@@ -12,9 +12,7 @@ const Footer = () => {
                         <h3 className="text-xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                             LaederData
                         </h3>
-                        <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-                            We specialize in "Vibe Coding" for small businesses—building custom automation agents, data pipelines, and dashboards that replace manual work.
-                        </p>
+                        We specialize in "Automation Engineering" for small businesses—building custom automation agents, data pipelines, and dashboards that replace manual work.
                         <p className="text-slate-500 text-xs">
                             &copy; {new Date().getFullYear()} Laeder Consulting, LLC.<br />All rights reserved.
                         </p>
