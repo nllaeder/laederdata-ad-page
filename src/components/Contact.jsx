@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle, Loader2, AlertCircle } from 'lucide-react';
 
-const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwMATh89jEoEOkNqwdEOdcv97G94uuUKV--P2unxwPPEHhiNL_dtCExq16wxbD07SUk4Q/exec';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzJEP7OFNBt_ap5rYy-EibPcbDz063cZ_-GI1UubPbWH4qJdl1Md9LjF_PhpUm3msGXdA/exec';
 
 const Contact = () => {
     const [status, setStatus] = useState('idle'); // idle, loading, success, error
