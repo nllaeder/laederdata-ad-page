@@ -1,17 +1,41 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle, Loader2 } from 'lucide-react';
+import { Send, CheckCircle, Loader2, AlertCircle } from 'lucide-react';
+
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwMATh89jEoEOkNqwdEOdcv97G94uuUKV--P2unxwPPEHhiNL_dtCExq16wxbD07SUk4Q/exec';
 
 const Contact = () => {
     const [status, setStatus] = useState('idle'); // idle, loading, success, error
+    const [formData, setFormData] = useState({
+        name: '',
+        business: '',
+        email: '',
+        message: '',
+    });
+
+    const handleChange = (e) => {
+        setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('loading');
 
-        // Simulate API call for now
-        setTimeout(() => {
+        try {
+            await fetch(GOOGLE_SHEET_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            // Google Apps Script with no-cors returns opaque response,
+            // so we treat any non-error as success
             setStatus('success');
-        }, 1500);
+            setFormData({ name: '', business: '', email: '', message: '' });
+        } catch (err) {
+            console.error('Form submission error:', err);
+            setStatus('error');
+        }
     };
 
     return (
@@ -47,11 +71,21 @@ const Contact = () => {
                         </div>
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-6">
+                            {status === 'error' && (
+                                <div className="flex items-center gap-3 bg-red-500/10 border border-red-500/30 text-red-400 rounded-lg px-4 py-3 text-sm">
+                                    <AlertCircle size={18} className="shrink-0" />
+                                    Something went wrong. Please try again or text us directly.
+                                </div>
+                            )}
+
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-medium text-slate-400 mb-2">Name</label>
                                     <input
                                         type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
                                         required
                                         className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all"
                                         placeholder="Jane Doe"
@@ -61,6 +95,9 @@ const Contact = () => {
                                     <label className="block text-sm font-medium text-slate-400 mb-2">Business Name</label>
                                     <input
                                         type="text"
+                                        name="business"
+                                        value={formData.business}
+                                        onChange={handleChange}
                                         required
                                         className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all"
                                         placeholder="Jane's Bakery"
@@ -72,6 +109,9 @@ const Contact = () => {
                                 <label className="block text-sm font-medium text-slate-400 mb-2">Email</label>
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     required
                                     className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all"
                                     placeholder="jane@example.com"
@@ -82,6 +122,9 @@ const Contact = () => {
                                 <label className="block text-sm font-medium text-slate-400 mb-2">What is the #1 manual task slowing you down?</label>
                                 <textarea
                                     rows="4"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     required
                                     className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all"
                                     placeholder="Examples: Adding invoices to Quickbooks, manually emailing leads, updating inventory..."
